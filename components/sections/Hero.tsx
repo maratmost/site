@@ -45,11 +45,11 @@ export default function Hero() {
               {/* Glow background for app previews */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 blur-3xl -z-10"></div>
               {[
-                { file: 'IMG_5660.PNG', translateX: -160, translateXMobile: -50, zIndex: 1 },
-                { file: 'Словари3.jpg', translateX: -80, translateXMobile: -25, zIndex: 2 },
+                { file: 'IMG_5660.PNG', translateX: -170, translateXMobile: -50, zIndex: 1 },
+                { file: 'Словари3.jpg', translateX: -85, translateXMobile: -25, zIndex: 2 },
                 { file: 'screenshot-3.jpg', translateX: 0, translateXMobile: 0, zIndex: 3 },
-                { file: 'IMG_5660.PNG', translateX: 80, translateXMobile: 25, zIndex: 4 },
-                { file: 'Словари3.jpg', translateX: 160, translateXMobile: 50, zIndex: 5 },
+                { file: 'IMG_5660.PNG', translateX: 85, translateXMobile: 25, zIndex: 4 },
+                { file: 'Словари3.jpg', translateX: 170, translateXMobile: 50, zIndex: 5 },
               ].map((screenshot, index) => (
                 <div
                   key={index}
