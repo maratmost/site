@@ -10,16 +10,18 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-primary"
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.3fr] gap-8 lg:gap-12 items-center mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-12 items-center">
           {/* Left Column - Photo */}
           <div className="flex justify-center lg:justify-start items-center">
-            <div className="w-full max-w-lg lg:max-w-xl xl:max-w-2xl aspect-square rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              {/* Glow background effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 blur-2xl -z-10"></div>
               <Image
                 src="/photo.png"
                 alt="Developer"
                 width={800}
                 height={800}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover relative z-10"
                 priority
               />
             </div>
@@ -28,12 +30,14 @@ export default function Hero() {
           {/* Right Column - Apps Screenshots Carousel */}
           <div className="flex flex-col items-center">
             <div className="relative h-[500px] lg:h-[650px] mb-8 flex items-center justify-center">
+              {/* Glow background for app previews */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 blur-3xl -z-10"></div>
               {[
-                { file: 'IMG_5660.PNG', translateX: -140, zIndex: 1 },
-                { file: 'Словари3.jpg', translateX: -70, zIndex: 2 },
+                { file: 'IMG_5660.PNG', translateX: -200, zIndex: 1 },
+                { file: 'Словари3.jpg', translateX: -100, zIndex: 2 },
                 { file: 'screenshot-3.jpg', translateX: 0, zIndex: 3 },
-                { file: 'IMG_5660.PNG', translateX: 70, zIndex: 4 },
-                { file: 'Словари3.jpg', translateX: 140, zIndex: 5 },
+                { file: 'IMG_5660.PNG', translateX: 100, zIndex: 4 },
+                { file: 'Словари3.jpg', translateX: 200, zIndex: 5 },
               ].map((screenshot, index) => (
                 <div
                   key={index}
@@ -60,19 +64,15 @@ export default function Hero() {
         </div>
 
         {/* Offer Box - Below both columns */}
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto text-center mt-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Разработка приложений под ключ
           </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-6">
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
             Превращаю вашу идею в рабочее приложение и публикую в App Store и Google Play. 
             <br className="hidden md:block" />
-            <strong className="text-white">3 месяца бесплатной поддержки</strong> после запуска. 
-            <strong className="text-white"> Фиксированная цена</strong> без скрытых платежей.
+            <strong className="text-white">Современный дизайн, чистый код и гарантия качества.</strong> 
           </p>
-          <Button variant="primary">
-            Обсудить проект
-          </Button>
         </div>
       </div>
     </section>
