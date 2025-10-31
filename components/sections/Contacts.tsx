@@ -25,7 +25,7 @@ export default function Contacts() {
   return (
     <section
       id="contacts"
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.h2
@@ -33,12 +33,12 @@ export default function Contacts() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-800 mb-8 sm:mb-12"
         >
           Контакты
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {contacts.map((contact, index) => (
             <motion.div
               key={contact.id}
@@ -46,7 +46,7 @@ export default function Contacts() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-primary rounded-3xl p-8 text-white text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              className="bg-gradient-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
             >
               <h3 className="text-2xl font-bold mb-6">{contact.title}</h3>
               <div className="w-full h-40 bg-white/20 rounded-2xl flex items-center justify-center border-2 border-dashed border-white/30 mb-6">

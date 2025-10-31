@@ -30,7 +30,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.h2
@@ -38,7 +38,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-800 mb-8 sm:mb-12"
         >
           Портфолио
         </motion.h2>
@@ -52,7 +52,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="min-w-[350px] flex-shrink-0 bg-gradient-primary rounded-3xl p-8 text-white shadow-xl"
+                className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] flex-shrink-0 bg-gradient-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl"
               >
                 <h3 className="text-2xl font-bold mb-6">{project.title}</h3>
                 <div className="grid grid-cols-2 gap-4 mb-6">

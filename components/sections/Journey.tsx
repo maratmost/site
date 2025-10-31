@@ -33,7 +33,7 @@ export default function Journey() {
   return (
     <section
       id="journey"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.h2
@@ -41,7 +41,7 @@ export default function Journey() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-800 mb-10 sm:mb-16"
         >
           Мой путь в разработке
         </motion.h2>
@@ -54,7 +54,7 @@ export default function Journey() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: sectionIndex * 0.2 }}
-              className="bg-gradient-primary rounded-3xl p-8 lg:p-12 text-white shadow-xl"
+              className="bg-gradient-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white shadow-xl"
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-8">{section.title}</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

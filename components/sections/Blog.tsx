@@ -30,7 +30,7 @@ export default function Blog() {
   return (
     <section
       id="blog"
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-cyan"
+      className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-cyan"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.h2
@@ -38,7 +38,7 @@ export default function Blog() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-white mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-8 sm:mb-12"
         >
           Блог
         </motion.h2>
@@ -52,7 +52,7 @@ export default function Blog() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="min-w-[350px] flex-shrink-0 bg-gradient-primary rounded-3xl p-8 text-white shadow-xl"
+                className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] flex-shrink-0 bg-gradient-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl"
               >
                 <h3 className="text-2xl font-bold mb-4">{article.title}</h3>
                 <p className="mb-6 text-white/90 leading-relaxed">{article.description}</p>
