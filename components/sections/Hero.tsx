@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Button from '@/components/ui/Button'
+import { getImagePath } from '@/lib/paths'
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
               {/* Glow background effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 blur-2xl -z-10"></div>
               <Image
-                src="/photo.png"
+                src={getImagePath("/photo.png")}
                 alt="Developer"
                 width={800}
                 height={800}
@@ -48,7 +49,7 @@ export default function Hero() {
                   }}
                 >
                   <Image
-                    src={`/${screenshot.file}`}
+                    src={getImagePath(`/${screenshot.file}`)}
                     alt={`App screenshot ${index + 1}`}
                     width={240}
                     height={426}
